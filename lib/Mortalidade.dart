@@ -24,10 +24,7 @@ class _MortalidadeState extends State<Mortalidade> {
   DateTime _selectedDate = DateTime.now();
   File? _selectedImage;
   Uint8List? _imageBytes;
-  String? _grupoCausa,
-      _causaMorte,
-      _retiro,
-      _notificante;
+  String? _grupoCausa, _causaMorte, _retiro, _notificante;
   List<String> gruposCausas = [], retiros = [];
   Map<String, List<String>> _causasMorteFiltradas = {};
   List<String> _causasMorteDisponiveis = [];
@@ -115,15 +112,37 @@ class _MortalidadeState extends State<Mortalidade> {
 
   Future<void> _pickImage() async {
     try {
-      final picker = ImagePicker();
+      final ImagePicker picker = ImagePicker();
+
+      // Mostrar opções em um bottom sheet
+      final source = await showModalBottomSheet<ImageSource>(
+        context: context,
+        builder: (context) => Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            ListTile(
+              leading: const Icon(Icons.camera_alt),
+              title: const Text('Tirar Foto'),
+              onTap: () => Navigator.pop(context, ImageSource.camera),
+            ),
+            ListTile(
+              leading: const Icon(Icons.photo_library),
+              title: const Text('Escolher da Galeria'),
+              onTap: () => Navigator.pop(context, ImageSource.gallery),
+            ),
+          ],
+        ),
+      );
+
+      if (source == null) return;
+
       final pickedFile = await picker.pickImage(
-        source: ImageSource.camera,
+        source: source,
         imageQuality: 80,
         preferredCameraDevice: CameraDevice.rear,
       );
 
       if (pickedFile != null) {
-        // Modificação principal: Leitura e compressão mais robusta
         final originalBytes = await pickedFile.readAsBytes();
 
         final compressedBytes = await FlutterImageCompress.compressWithList(
@@ -147,7 +166,7 @@ class _MortalidadeState extends State<Mortalidade> {
         });
       }
     } catch (e) {
-      _showError('Erro na câmera: ${e.toString()}');
+      _showError('Erro ao selecionar imagem: ${e.toString()}');
     }
   }
 
@@ -182,8 +201,10 @@ class _MortalidadeState extends State<Mortalidade> {
   }
 
   Future<void> _salvarRegistro() async {
+    preencherCampos();
     if (!_validarCampos()) return;
 
+    print("VALIDARCAMPOS: $_validarCampos");
     try {
       final path = await _getFilePath('mortalidades-sanigado.json');
       final file = File(path);
@@ -201,14 +222,43 @@ class _MortalidadeState extends State<Mortalidade> {
   }
 
   bool _validarCampos() {
-    if (_grupoCausa == null || _causaMorte == null) {
-      _showError('Selecione um grupo e uma causa de morte');
-      return false;
-    }
+
     if (_brincoController.text.isEmpty) {
       _showError('O campo Brinco é obrigatório');
       return false;
     }
+
+    if (_grupoCausa == null || _grupoCausa!.isEmpty) {
+      _showError('Selecione um Grupo de Causas');
+      return false;
+    }
+
+    if (_causaMorte == null || _causaMorte!.isEmpty) {
+      _showError('Selecione uma Causa da Morte');
+      return false;
+    }
+
+    if (_retiro == null || _retiro!.isEmpty) {
+      _showError('Selecione o Retiro');
+      return false;
+    }
+
+    if (_localidadeController.text.isEmpty) {
+      _showError('O campo Localidade é obrigatório');
+      return false;
+    }
+
+    // Campos adicionais que podem ser obrigatórios dependendo dos requisitos
+    if (_descricaoController.text.isEmpty) {
+      _showError('O campo Descrição é obrigatório');
+      return false;
+    }
+
+    if (_imageBytes == null) {
+      _showError('É obrigatório ter uma foto');
+      return false;
+    }
+
     return true;
   }
 
@@ -243,7 +293,9 @@ class _MortalidadeState extends State<Mortalidade> {
   Future<void> _salvarRegistrosNoArquivo(
     File file,
     List<dynamic> registros,
+
   ) async {
+    preencherCampos();
     await file.writeAsString(
       jsonEncode(registros),
       flush: true,
@@ -257,8 +309,7 @@ class _MortalidadeState extends State<Mortalidade> {
     _laudoController.clear();
     _localidadeController.clear();
     setState(() {
-      _grupoCausa =
-          _causaMorte = _retiro = null;
+      _grupoCausa = _causaMorte = _retiro = null;
       _selectedImage = null;
       _imageBytes = null;
       _selectedDate = DateTime.now();
@@ -402,5 +453,19 @@ class _MortalidadeState extends State<Mortalidade> {
         ),
       ),
     );
+  }
+
+  void preencherCampos() {
+    if (_laudoController.text.isEmpty) {
+      _laudoController.text = "Não preenchido";
+    }
+
+    if (_descricaoController.text.isEmpty) {
+      _descricaoController.text = "Não preenchido";
+    }
+
+    if (_localidadeController.text.isEmpty) {
+      _localidadeController.text = "Não preenchido";
+    }
   }
 }
