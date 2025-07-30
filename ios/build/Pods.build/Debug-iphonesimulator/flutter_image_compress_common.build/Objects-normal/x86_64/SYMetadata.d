@@ -1,0 +1,31 @@
+dependencies: \
+  /Users/elizeuvix/Documents/sanigado/ios/build/Pods.build/Debug-iphonesimulator/flutter_image_compress_common.build/module.modulemap \
+  /Users/elizeuvix/.pub-cache/hosted/pub.dev/flutter_image_compress_common-1.0.6/ios/Classes/SYPictureMetadata/SYMetadata.m \
+  /Users/elizeuvix/Documents/sanigado/ios/Pods/Target\ Support\ Files/flutter_image_compress_common/flutter_image_compress_common-prefix.pch \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UIKit.framework/Modules/module.modulemap \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Foundation.framework/Modules/module.modulemap \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/ImageIO.framework/Modules/module.modulemap \
+  /Users/elizeuvix/.pub-cache/hosted/pub.dev/flutter_image_compress_common-1.0.6/ios/Classes/SYPictureMetadata/SYMetadata.h \
+  /Users/elizeuvix/.pub-cache/hosted/pub.dev/flutter_image_compress_common-1.0.6/ios/Classes/SYPictureMetadata/SYMetadataTIFF.h \
+  /Users/elizeuvix/.pub-cache/hosted/pub.dev/flutter_image_compress_common-1.0.6/ios/Classes/SYPictureMetadata/SYMetadataBase.h \
+  /Users/elizeuvix/Documents/sanigado/ios/build/Pods.build/Debug-iphonesimulator/Mantle.build/module.modulemap \
+  /Users/elizeuvix/.pub-cache/hosted/pub.dev/flutter_image_compress_common-1.0.6/ios/Classes/SYPictureMetadata/SYMetadataGIF.h \
+  /Users/elizeuvix/.pub-cache/hosted/pub.dev/flutter_image_compress_common-1.0.6/ios/Classes/SYPictureMetadata/SYMetadataJFIF.h \
+  /Users/elizeuvix/.pub-cache/hosted/pub.dev/flutter_image_compress_common-1.0.6/ios/Classes/SYPictureMetadata/SYMetadataExif.h \
+  /Users/elizeuvix/.pub-cache/hosted/pub.dev/flutter_image_compress_common-1.0.6/ios/Classes/SYPictureMetadata/SYMetadataPNG.h \
+  /Users/elizeuvix/.pub-cache/hosted/pub.dev/flutter_image_compress_common-1.0.6/ios/Classes/SYPictureMetadata/SYMetadataIPTC.h \
+  /Users/elizeuvix/.pub-cache/hosted/pub.dev/flutter_image_compress_common-1.0.6/ios/Classes/SYPictureMetadata/SYMetadataIPTCContactInfo.h \
+  /Users/elizeuvix/.pub-cache/hosted/pub.dev/flutter_image_compress_common-1.0.6/ios/Classes/SYPictureMetadata/SYMetadataGPS.h \
+  /Users/elizeuvix/.pub-cache/hosted/pub.dev/flutter_image_compress_common-1.0.6/ios/Classes/SYPictureMetadata/SYMetadataRaw.h \
+  /Users/elizeuvix/.pub-cache/hosted/pub.dev/flutter_image_compress_common-1.0.6/ios/Classes/SYPictureMetadata/SYMetadataCIFF.h \
+  /Users/elizeuvix/.pub-cache/hosted/pub.dev/flutter_image_compress_common-1.0.6/ios/Classes/SYPictureMetadata/SYMetadataMakerCanon.h \
+  /Users/elizeuvix/.pub-cache/hosted/pub.dev/flutter_image_compress_common-1.0.6/ios/Classes/SYPictureMetadata/SYMetadataMakerNikon.h \
+  /Users/elizeuvix/.pub-cache/hosted/pub.dev/flutter_image_compress_common-1.0.6/ios/Classes/SYPictureMetadata/SYMetadataMakerMinolta.h \
+  /Users/elizeuvix/.pub-cache/hosted/pub.dev/flutter_image_compress_common-1.0.6/ios/Classes/SYPictureMetadata/SYMetadataMakerFuji.h \
+  /Users/elizeuvix/.pub-cache/hosted/pub.dev/flutter_image_compress_common-1.0.6/ios/Classes/SYPictureMetadata/SYMetadataMakerOlympus.h \
+  /Users/elizeuvix/.pub-cache/hosted/pub.dev/flutter_image_compress_common-1.0.6/ios/Classes/SYPictureMetadata/SYMetadataMakerPentax.h \
+  /Users/elizeuvix/.pub-cache/hosted/pub.dev/flutter_image_compress_common-1.0.6/ios/Classes/SYPictureMetadata/SYMetadata8BIM.h \
+  /Users/elizeuvix/.pub-cache/hosted/pub.dev/flutter_image_compress_common-1.0.6/ios/Classes/SYPictureMetadata/SYMetadataDNG.h \
+  /Users/elizeuvix/.pub-cache/hosted/pub.dev/flutter_image_compress_common-1.0.6/ios/Classes/SYPictureMetadata/SYMetadataExifAux.h \
+  /Users/elizeuvix/.pub-cache/hosted/pub.dev/flutter_image_compress_common-1.0.6/ios/Classes/SYPictureMetadata/NSDictionary+SY.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/AssetsLibrary.framework/Modules/module.modulemap

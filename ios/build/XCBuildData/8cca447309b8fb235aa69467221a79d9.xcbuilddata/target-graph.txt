@@ -1,0 +1,47 @@
+Target dependency graph (15 targets)
+Target 'Runner' in project 'Runner'
+➜ Implicit dependency on target 'Pods-Runner' in project 'Pods' via file 'Pods_Runner.framework' in build phase 'Link Binary'
+➜ Implicit dependency on target 'Mantle' in project 'Pods' via options '-framework Mantle' in build setting 'OTHER_LDFLAGS'
+➜ Implicit dependency on target 'SDWebImage' in project 'Pods' via options '-framework SDWebImage' in build setting 'OTHER_LDFLAGS'
+➜ Implicit dependency on target 'SDWebImageWebPCoder' in project 'Pods' via options '-framework SDWebImageWebPCoder' in build setting 'OTHER_LDFLAGS'
+➜ Implicit dependency on target 'connectivity_plus' in project 'Pods' via options '-framework connectivity_plus' in build setting 'OTHER_LDFLAGS'
+➜ Implicit dependency on target 'flutter_image_compress_common' in project 'Pods' via options '-framework flutter_image_compress_common' in build setting 'OTHER_LDFLAGS'
+➜ Implicit dependency on target 'image_picker_ios' in project 'Pods' via options '-framework image_picker_ios' in build setting 'OTHER_LDFLAGS'
+➜ Implicit dependency on target 'libwebp' in project 'Pods' via options '-framework libwebp' in build setting 'OTHER_LDFLAGS'
+➜ Implicit dependency on target 'path_provider_foundation' in project 'Pods' via options '-framework path_provider_foundation' in build setting 'OTHER_LDFLAGS'
+Target 'Pods-Runner' in project 'Pods'
+➜ Explicit dependency on target 'Flutter' in project 'Pods'
+➜ Explicit dependency on target 'Mantle' in project 'Pods'
+➜ Explicit dependency on target 'SDWebImage' in project 'Pods'
+➜ Explicit dependency on target 'SDWebImageWebPCoder' in project 'Pods'
+➜ Explicit dependency on target 'connectivity_plus' in project 'Pods'
+➜ Explicit dependency on target 'flutter_image_compress_common' in project 'Pods'
+➜ Explicit dependency on target 'image_picker_ios' in project 'Pods'
+➜ Explicit dependency on target 'libwebp' in project 'Pods'
+➜ Explicit dependency on target 'path_provider_foundation' in project 'Pods'
+Target 'path_provider_foundation' in project 'Pods'
+➜ Explicit dependency on target 'Flutter' in project 'Pods'
+➜ Explicit dependency on target 'path_provider_foundation-path_provider_foundation_privacy' in project 'Pods'
+Target 'path_provider_foundation-path_provider_foundation_privacy' in project 'Pods' (no dependencies)
+Target 'image_picker_ios' in project 'Pods'
+➜ Explicit dependency on target 'Flutter' in project 'Pods'
+➜ Explicit dependency on target 'image_picker_ios-image_picker_ios_privacy' in project 'Pods'
+Target 'image_picker_ios-image_picker_ios_privacy' in project 'Pods' (no dependencies)
+Target 'flutter_image_compress_common' in project 'Pods'
+➜ Explicit dependency on target 'Flutter' in project 'Pods'
+➜ Explicit dependency on target 'Mantle' in project 'Pods'
+➜ Explicit dependency on target 'SDWebImage' in project 'Pods'
+➜ Explicit dependency on target 'SDWebImageWebPCoder' in project 'Pods'
+Target 'connectivity_plus' in project 'Pods'
+➜ Explicit dependency on target 'Flutter' in project 'Pods'
+➜ Explicit dependency on target 'connectivity_plus-connectivity_plus_privacy' in project 'Pods'
+Target 'connectivity_plus-connectivity_plus_privacy' in project 'Pods' (no dependencies)
+Target 'SDWebImageWebPCoder' in project 'Pods'
+➜ Explicit dependency on target 'SDWebImage' in project 'Pods'
+➜ Explicit dependency on target 'libwebp' in project 'Pods'
+Target 'libwebp' in project 'Pods' (no dependencies)
+Target 'SDWebImage' in project 'Pods'
+➜ Explicit dependency on target 'SDWebImage-SDWebImage' in project 'Pods'
+Target 'SDWebImage-SDWebImage' in project 'Pods' (no dependencies)
+Target 'Mantle' in project 'Pods' (no dependencies)
+Target 'Flutter' in project 'Pods' (no dependencies)
